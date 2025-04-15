@@ -11,33 +11,38 @@ from pacientes.page import show_pacientes
 from pagamentos.page import show_pagamentos
 from Terapeuta.page import show_terapeutas
 from home.page import show_home
+from login.page import show_login
 
 
 def main():  # Organizando o código para deixar ele facil de entender
-    st.title('Flix APP')
+    
+    if 'token' not in st.session_state:
+        show_login()
+    else:    
+        st.title('Flix APP')
 
-    menu_option = st.sidebar.selectbox(  # Criando sidebarselecetbox
-        'Selecione uma opção',
-        ['Início', 'Atendimentos', 'Pacientes', 'Decanos', 'Pagamentos', 'Terapeutas']
-    )
+        menu_option = st.sidebar.selectbox(  # Criando sidebarselecetbox
+            'Selecione uma opção',
+            ['Início', 'Atendimentos', 'Pacientes', 'Decanos', 'Pagamentos', 'Terapeutas']
+        )
 
-    if menu_option == 'Início':  # Definindo caminho das opções do sidebar
-        show_home()
+        if menu_option == 'Início':  # Definindo caminho das opções do sidebar
+            show_home()
 
-    if menu_option == 'Atendimentos':
-        show_atendimento()
+        if menu_option == 'Atendimentos':
+            show_atendimento()
 
-    if menu_option == 'Pacientes':
-        show_pacientes()
+        if menu_option == 'Pacientes':
+            show_pacientes()
 
-    if menu_option == 'Decanos':
-        show_decano()
+        if menu_option == 'Decanos':
+            show_decano()
 
-    if menu_option == 'Pagamentos':
-        show_pagamentos()
+        if menu_option == 'Pagamentos':
+            show_pagamentos()
 
-    if menu_option == 'Terapeutas':
-        show_terapeutas()
+        if menu_option == 'Terapeutas':
+            show_terapeutas()
 
 
 if __name__ == '__main__':
