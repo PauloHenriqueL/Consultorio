@@ -17,7 +17,7 @@ def show_terapeutas():
     AgGrid(
         data=df,
         reload_data=True,
-        key='terapeuta_grid',    
+        key='terapeuta_grid',
     )
 
     st.title('Cadastrar novo Terapeuta')

@@ -4,7 +4,6 @@ from st_aggrid import AgGrid
 from pagamentos.models import Pagamento
 
 
-
 def show_pagamentos():
     st.write('Lista Pagamentos')
 
@@ -18,7 +17,7 @@ def show_pagamentos():
     AgGrid(
         data=df,
         reload_data=True,
-        key='pagamentos_grid',    
+        key='pagamentos_grid',
     )
 
     st.title('Cadastrar novo Pagamento')

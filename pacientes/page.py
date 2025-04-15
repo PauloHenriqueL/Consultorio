@@ -4,7 +4,6 @@ from st_aggrid import AgGrid
 from pacientes.models import Paciente
 
 
-
 def show_pacientes():
     st.write('Lista Pacientes')
 
@@ -18,7 +17,7 @@ def show_pacientes():
     AgGrid(
         data=df,
         reload_data=True,
-        key='pacientes_grid',    
+        key='pacientes_grid',
     )
 
     st.title('Cadastrar novo Paciente')

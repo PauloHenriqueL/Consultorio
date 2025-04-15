@@ -15,5 +15,5 @@ class Atendimento(models.Model):  # Cria o model
     class Meta:  # Ordene por name
         ordering = ['paciente']
 
-    def __str__(self):  #Cite o objeto dele pelo name
+    def __str__(self):  # Cite o objeto dele pelo name
         return self.paciente.nome

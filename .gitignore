@@ -25,3 +25,7 @@ staticfiles/
 # OS-specific
 .DS_Store
 Thumbs.db
+
+# Dev
+
+.flake8

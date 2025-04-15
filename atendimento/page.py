@@ -4,7 +4,6 @@ from st_aggrid import AgGrid
 from atendimento.models import Atendimento
 
 
-
 def show_atendimento():
     st.write('Lista Atendimentos')
 
@@ -18,7 +17,7 @@ def show_atendimento():
     AgGrid(
         data=df,
         reload_data=True,
-        key='atendimento_grid',    
+        key='atendimento_grid',
     )
 
     st.title('Cadastrar novo Atendimento')

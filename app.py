@@ -1,8 +1,6 @@
 import streamlit as st
 import os
 import django
-
-
 # Configurando o Django para usar o arquivo de configurações correto
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')  # Certifique-se de que 'app.settings' está correto
 django.setup()
@@ -22,7 +20,7 @@ def main():  # Organizando o código para deixar ele facil de entender
         'Selecione uma opção',
         ['Início', 'Atendimentos', 'Pacientes', 'Decanos', 'Pagamentos', 'Terapeutas']
     )
-    
+
     if menu_option == 'Início':  # Definindo caminho das opções do sidebar
         show_home()
 
@@ -40,6 +38,7 @@ def main():  # Organizando o código para deixar ele facil de entender
 
     if menu_option == 'Terapeutas':
         show_terapeutas()
+
 
 if __name__ == '__main__':
     main()
